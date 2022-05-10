@@ -19,6 +19,111 @@
       section {
         padding-top: 5rem;
       }
+      .container2
+      {
+        position: relative;
+        width: 500px;	
+      }
+      .continer h2
+      {
+        color: #fff;
+      }
+      .container2 .skills
+      {
+        position: relative;
+        display: flex;
+        margin: 20px 0;
+        padding: 24px 10px 18px;
+        background: linear-gradient(#616161 0%, #333 10%, #222);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #000;
+        transition: 0.5s;
+      }
+      .container2:hover .skills
+      {
+        opacity: 0.05;
+      }
+      .container2 .skills:hover
+      {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      .container2 .skills:before
+      {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(255,255,255,.1);
+        z-index: 10;
+      }
+      .container2 .skills .Name
+      {
+        position: relative;
+        width: 110px;
+        text-align: right;
+        color: #fff;
+        margin-top: -2px;
+        text-transform: uppercase;
+      }
+      .container2 .skills .Value
+      {
+        position: relative;
+        width: 40px;
+        text-align: left;
+        color: #fff;
+        margin-top: -2px;
+        text-transform: uppercase;
+      }
+      .percent
+      {
+        position: relative;
+        width: calc(100% - 150px);
+        height: 20px;
+        margin: 0 10px;
+        border-radius: 10px;
+        background: #151515;
+        box-shadow: inset 0 0 10px #000;
+        overflow: hidden;
+      }
+      .container2 .skills .percent .progress
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: inset 0 0 2px #000;
+        animation: animate 4s ease-in-out forwards;
+      }
+      @keyframes animate
+      {
+        from
+        {
+          width: 0;
+        }
+      }
+      .container2 .skills:nth-child(2) .percent .progress
+      {
+        background: linear-gradient(45deg, #1fe6ff, #673AB7);
+      }
+      .container2 .skills:nth-child(3) .percent .progress
+      {
+        background: linear-gradient(45deg, #ffee54, #ff00ca);
+      }
+      .container2 .skills:nth-child(4) .percent .progress
+      {
+        background: linear-gradient(45deg, #3bc0ff, #33ff00);
+      }
+      .container2 .skills:nth-child(5) .percent .progress
+      {
+        background: linear-gradient(45deg, #22ffde, #2196f3);
+      }
     </style>
     <title>Portfolio</title>
   </head>
@@ -53,8 +158,8 @@
     <!-- JUMBOTRON -->
     <section class="jumbotron text-center">
       <img src="img/profil.png" alt="CM" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Name</h1>
-      <p class="lead">....</p>
+      <h1 class="display-4">Ignatius Gian Wijaya</h1>
+      <p class="lead">Mahasiswa</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -67,21 +172,37 @@
 
     <!-- ABOUT -->
     <section id="about" class="">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>About Us</h2>
+        <div class="container2">
+          <h2>About Me</h2>
+          <div class="skills">
+            <span class="Name">Photoshop</span>
+            <div class="percent">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+            <span class="Value">75%</span>
+          </div>
+          <div class="skills">
+            <span class="Name">Illustrator</span>
+            <div class="percent">
+              <div class="progress" style="width: 65%;"></div>
+            </div>
+            <span class="Value">65%</span>
+          </div>
+          <div class="skills">
+            <span class="Name">Canva</span>
+            <div class="percent">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+            <span class="Value">60%</span>
+          </div>
+          <div class="skills">
+            <span class="Name">Premiere Pro</span>
+            <div class="percent">
+              <div class="progress" style="width: 45%;"></div>
+            </div>
+            <span class="Value">45%</span>
           </div>
         </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima error quisquam velit temporibus eligendi repellat facilis beatae animi placeat numquam.</p>
-          </div>
-          <div class="col-md-4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid fugiat cumque dicta sapiente quas expedita at quod, saepe eos fugit officia neque assumenda. Voluptate, corporis?</p>
-          </div>
-        </div>
-      </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#bed1ee"
@@ -103,7 +224,7 @@
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/1.png" class="card-img-top" alt="..." />
+              <img src="img/projects/Feed Natal.png" class="card-img-top" alt="..." width="900" height="650" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -111,7 +232,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/2.png" class="card-img-top" alt="..." />
+              <img src="img/projects/Final.jpg" class="card-img-top" alt="..." width="900" height="650"/>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -119,7 +240,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/3.png" class="card-img-top" alt="..." />
+              <img src="img/projects/Lampu.jpg" class="card-img-top" alt="..." width="900" height="650"/>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -128,7 +249,7 @@
 
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/4.png" class="card-img-top" alt="..." />
+              <img src="img/projects/TGS-UTAMA.jpg" class="card-img-top" alt="..." width="900" height="650"/>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -136,7 +257,15 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/projects/5.png" class="card-img-top" alt="..." />
+              <img src="img/projects/gradient-&-stroke.gif" class="card-img-top" alt="..." width="900" height="650"/>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/projects/logo.jpg" class="card-img-top" alt="..." width="900" height="650"/>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -171,18 +300,18 @@
             <form name="Contact-Form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="name" class="form-control" id="name" aria-describedby="name" name="nama" />
+                <input type="name" class="form-control" id="name" aria-describedby="name" name="nama" disabled="true"/>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" disabled="true"/>
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan" disabled="true"></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim" disabled="true">Kirim</button>
               <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
